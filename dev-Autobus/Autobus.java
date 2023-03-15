@@ -11,6 +11,7 @@ class Autobus {
   private Jauge assis;
   private Jauge debout;
   private ArrayList<PassagerStandard> passagers;
+  private ArrayList<PassagerStandard> passagersDel;
 
   // constructor
   public Autobus(int nbPlaceAssise, int nbPlaceDebout) {
@@ -49,9 +50,12 @@ class Autobus {
     numeroArret++;
     // Create a temporary list to avoid ConcurrentModificationException
     // It has a performance cost, but it's the only way to avoid it
-    ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers);
-    passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
-    passagersTmp.clear();
+    // ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers);
+    // passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
+    // passagersTmp.clear();
+    passagers.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
+    passagers.removeAll(passagersDel);
+    //passagersDel.clear();
   }
 
   public void arretDemanderAssis(PassagerStandard p) {
@@ -69,7 +73,8 @@ class Autobus {
   public void arretDemanderSortie(PassagerStandard p) {
     debout.decrementer();
     p.changerEnDehors();
-    passagers.remove(p);
+    // passagers.remove(p);
+    passagersDel.add(p);
   }
 
   @Override
