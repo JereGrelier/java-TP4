@@ -20,28 +20,49 @@ class Autobus {
 
   //methods
   public boolean aPlaceAssise() {
-    return false;
+    return assis.estVert();
   }
 
   public boolean aPlaceDebout() {
-    return false;
+    return debout.estVert();
   }
 
   public void monteeDemanderAssis(PassagerStandard p) {
+    if (aPlaceAssise()) {
+      assis.incrementer();
+      passagers.add(p);
+      p.changerEnAssis();
+    }
   }
 
   public void monteeDemanderDebout(PassagerStandard p) {
+    if (aPlaceDebout()) {
+      debout.incrementer();
+      passagers.add(p);
+      p.changerEnDebout();
+    }
   }
 
   public void allerArretSuivant() {
+    numeroArret++;
+    for (PassagerStandard p : passagers) {
+      p.nouvelArret(this, numeroArret);
+    }
   }
 
   public void arretDemanderAssis(PassagerStandard p) {
+    debout.decrementer();
+    assis.incrementer();
   }
 
   public void arretDemanderDebout(PassagerStandard p) {
+    assis.decrementer();
+    debout.incrementer();
   }
 
   public void arretDemanderSortie(PassagerStandard p) {
+    debout.decrementer();
+    p.changerEnDehors();
+    passagers.remove(p);
   }
 }
