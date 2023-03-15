@@ -50,9 +50,9 @@ class Autobus {
     numeroArret++;
     // Create a temporary list to avoid ConcurrentModificationException
     // It has a performance cost, but it's the only way to avoid it
-    // ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers);
-    // passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
-    // passagersTmp.clear();
+    // ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers); la list copié a les mêmes références (adresses <=> pointeurs) que passagers pointants vers les mêmes objets
+    // passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret)); // passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret)); // (p -> p.nouvelArret(this, numeroArret) = lambda expression
+    // passagersTmp.clear(); // clear the temporary list, garbage collector will do the rest
     passagers.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
     passagers.removeAll(passagersDel);
     // passagersDel.clear();
