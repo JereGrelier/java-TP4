@@ -57,4 +57,9 @@ class PassagerStandard {
       t.arretDemanderSortie(this);
     }
   }
+
+  @Override
+  public String toString() {
+    return this.nom() + " " + this.position;
+  }
 }

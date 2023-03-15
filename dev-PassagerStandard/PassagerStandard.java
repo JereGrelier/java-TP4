@@ -1,3 +1,5 @@
+
+
 //source without documentation for javadoc
 
 class PassagerStandard {
@@ -54,5 +56,10 @@ class PassagerStandard {
     if (numeroArret == this.destination) {
       t.arretDemanderSortie(this);
     }
+  }
+
+  @Override
+  public String toString() {
+    return this.nom() + " " + this.position;
   }
 }

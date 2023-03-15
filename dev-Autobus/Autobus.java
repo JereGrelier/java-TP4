@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 
 //source without documentation for javadoc
@@ -45,7 +47,12 @@ class Autobus {
 
   public void allerArretSuivant() {
     numeroArret++;
-    passagers.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
+    // Create a temporary list to avoid ConcurrentModificationException
+    // It has a performance cost, but it's the only way to avoid it
+    ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers);
+    passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
+    passagers = new ArrayList<PassagerStandard>(passagersTmp);
+    passagersTmp.clear();
   }
 
   public void arretDemanderAssis(PassagerStandard p) {
