@@ -1,5 +1,6 @@
 
 
+package tec;
 /**
  * Cette classe repr'esente la position d'un passager par rapport 'a un transport.
  * Une position a trois 'etats possibles : assis dans un transport, 

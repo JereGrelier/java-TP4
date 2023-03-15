@@ -1,3 +1,4 @@
+package tec;
 public class DebogueJauge {
 
     DebogueJauge() {

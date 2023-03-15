@@ -1,3 +1,4 @@
+package tec;
 class DeboguePosition {
     private void testUltime() {
         System.out.println("*Test ultime*");

@@ -1,5 +1,6 @@
 
 
+package tec;
 /**
  * R'ealisation d'une jauge sur un intervalle d'entiers.
  * <p>

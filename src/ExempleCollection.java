@@ -1,4 +1,5 @@
 
+package tec;
 /* Exemple d'utilisation de la classe java.util.Vector
  * Elle repr'esente un tableau dont la taille peut augmenter.
  * Sa r'ealisation assure de fonctionner correctement avec 
