@@ -19,6 +19,7 @@ class Autobus {
     debout = new Jauge(nbPlaceDebout, 0);
     numeroArret = 0;
     passagers = new ArrayList<PassagerStandard>();
+    passagersDel = new ArrayList<PassagerStandard>();
   }
 
   //methods
