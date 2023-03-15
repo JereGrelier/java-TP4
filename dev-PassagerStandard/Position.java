@@ -20,7 +20,7 @@ class Position {
    * initialise l'instance 'a dehors.
    * 
    */
-  public Position() {
+  public Position() { // constructeur public par defaut (peut être utilisé par d'autres classes)
     COURANT = DEHORS;
   }
 
@@ -29,7 +29,7 @@ class Position {
    * 
    * @param e valeur d'une des positions.
    */
-  private Position(int e) {
+  private Position(int e) { // constructeur privé (ne peut être utilisé que par la classe Position)
     COURANT = e;
   }
 
