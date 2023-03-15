@@ -50,11 +50,13 @@ class Autobus {
 
   public void arretDemanderAssis(PassagerStandard p) {
     debout.decrementer();
+    p.changerEnAssis();
     assis.incrementer();
   }
 
   public void arretDemanderDebout(PassagerStandard p) {
     assis.decrementer();
+    p.changerEnDebout();
     debout.incrementer();
   }
 
