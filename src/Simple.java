@@ -1,4 +1,4 @@
-
+import tec.*;
 
 class Simple {
 
@@ -7,19 +7,19 @@ class Simple {
    * Sur un param`etre de type Object, la m'ethode println()
    * utilise la methode toString().
    * La m'ethodes toString() doit ^etre redéfinie dans les
-   * deux classes PassagerStandard et Autobus.
+   * deux classes tec.PassagerStandard et tec.Autobus.
    */
-  static private void deboguerEtat (Autobus t, PassagerStandard p) {
+  static private void deboguerEtat (tec.Autobus t, tec.PassagerStandard p) {
     System.out.println(p);
     System.out.println(t);
   }
 
   static public void main (String[] args) {
-    Autobus serenity = new Autobus(1, 2);
+    tec.Autobus serenity = new tec.Autobus(1, 2);
 
-    PassagerStandard kaylee = new PassagerStandard("Kaylee", 4);
-    PassagerStandard jayne = new PassagerStandard("Jayne", 4);
-    PassagerStandard inara = new PassagerStandard("Inara", 5);
+    tec.PassagerStandard kaylee = new tec.PassagerStandard("Kaylee", 4);
+    tec.PassagerStandard jayne = new tec.PassagerStandard("Jayne", 4);
+    tec.PassagerStandard inara = new tec.PassagerStandard("Inara", 5);
 
     System.out.println(serenity);
 
