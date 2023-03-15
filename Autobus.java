@@ -51,7 +51,6 @@ class Autobus {
     // It has a performance cost, but it's the only way to avoid it
     ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers);
     passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
-    passagers = new ArrayList<PassagerStandard>(passagersTmp);
     passagersTmp.clear();
   }
 
