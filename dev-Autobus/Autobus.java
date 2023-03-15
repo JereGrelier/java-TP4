@@ -65,4 +65,9 @@ class Autobus {
     p.changerEnDehors();
     passagers.remove(p);
   }
+
+  @Override
+  public String toString() {
+    return "[arret:" + numeroArret + ", assis:" + assis.toString() + ", debout: " + debout.toString() + "]";
+  }
 }
