@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //source without documentation for javadoc
 
-class Autobus {
+public class Autobus {
 
   //attributes
   private int numeroArret;

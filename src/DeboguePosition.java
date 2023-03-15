@@ -1,5 +1,5 @@
 package tec;
-class DeboguePosition {
+public class DeboguePosition {
     private void testUltime() {
         System.out.println("*Test ultime*");
         Position p = new Position();

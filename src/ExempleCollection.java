@@ -6,7 +6,7 @@ package tec;
  * plusieurs <<threads>>.
  */
 
-class ExempleCollection {
+public class ExempleCollection {
 
   static public void main (String[] args) {
     String s1 = "Une petite";
