@@ -47,7 +47,10 @@ class Autobus {
 
   public void allerArretSuivant() {
     numeroArret++;
-    passagers.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
+    ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers);
+    passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
+    passagers = new ArrayList<PassagerStandard>(passagersTmp);
+    passagersTmp.clear();
   }
 
   public void arretDemanderAssis(PassagerStandard p) {
