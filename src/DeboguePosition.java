@@ -2,7 +2,7 @@ package tec;
 public class DeboguePosition {
     private void testUltime() {
         System.out.println("*Test ultime*");
-        Position p = new Position();
+        Position p = Position.create();
         int incoherence = 0;
         String message1 = "";
         String message2 = "";
@@ -35,7 +35,7 @@ public class DeboguePosition {
 
     private void testDehorsInitial() {
         System.out.println("*Test dehors initial*");
-        Position p = new Position();
+        Position p = Position.create();
 
         if(p.estDehors() == true && p.estInterieur() == true) {
             System.out.println("KO: Est dehors et à l'intérieur à l'état initial");
@@ -50,7 +50,7 @@ public class DeboguePosition {
 
     private void testDehorsA() {
         System.out.println("*Test dehors assis*");
-        Position p = new Position();
+        Position p = Position.create();
         p.assis();
 
         if(p.estAssis() == true && p.estDehors() == true) {
@@ -66,7 +66,7 @@ public class DeboguePosition {
 
     private void testDehorsD() {
         System.out.println("*Test dehors debout*");
-        Position p = new Position();
+        Position p = Position.create();
         p.debout();
 
         if(p.estDebout() == true && p.estDehors() == true) {
@@ -82,7 +82,7 @@ public class DeboguePosition {
 
     private void testDehorsAD() {
         System.out.println("*Test assis dehors*");
-        Position p = new Position();
+        Position p = Position.create();
         p.assis();
         p.dehors();
 

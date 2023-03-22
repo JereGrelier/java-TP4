@@ -12,7 +12,7 @@ class PassagerStandard {
   public PassagerStandard(String nom, int destination) {
     this.nom = nom; // this.nom désigne zone mémoire du nom de l'instance
     this.destination = destination;
-    this.position = new Position(); 
+    this.position = Position.create(); 
   }
 
   //methods

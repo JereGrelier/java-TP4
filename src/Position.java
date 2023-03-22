@@ -13,9 +13,9 @@ package tec;
  **/
 class Position {
 
-  private final int DEHORS = 1;
-  private final int ASSIS  = 2;
-  private final int DEBOUT = 3;
+  private static final int DEHORS = 1;
+  private static final int ASSIS  = 2;
+  private static final int DEBOUT = 3;
 
   private static final Position INSTANCE_DEHORS = new Position(DEHORS);
   private static final Position INSTANCE_ASSIS  = new Position(ASSIS);
