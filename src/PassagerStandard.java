@@ -66,6 +66,17 @@ public class PassagerStandard {
     }
   }
 
+  public void monterCaractereStandard(Autobus t) {
+    // if (t.aPlaceAssise()){
+    //   t.monteeDemanderAssis(this); // 'this' is a PassagerStandard
+    // } else if (t.aPlaceDebout()){
+    //   t.monteeDemanderDebout(this);
+    // }
+  }
+  public void monterCaractereAnxieux (Autobus t) {
+
+  }
+
   public void nouvelArret(Autobus t, int numeroArret) {
     if (this.type == ANXIEUX) {
       if (numeroArret+1 == this.destination) {
