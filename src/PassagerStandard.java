@@ -14,6 +14,14 @@ public class PassagerStandard {
   private int STANDARD = 1;
 
   // constructor
+  public PassagerStandard(String nom, int destination) {
+    this.nom = nom; // this.nom désigne zone mémoire du nom de l'instance
+    this.destination = destination;
+    this.position = Position.create();
+    this.type = 1;
+
+  }
+
   public PassagerStandard(String nom, int destination, int type) {
     this.nom = nom; // this.nom désigne zone mémoire du nom de l'instance
     this.destination = destination;

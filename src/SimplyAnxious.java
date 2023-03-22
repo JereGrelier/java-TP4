@@ -1,6 +1,6 @@
 import tec.*;
 
-class Simple {
+class SimplyAnxious {
 
   /*
    * Affiche les 'etats d'un usager et d'un transport.
@@ -17,9 +17,9 @@ class Simple {
   static public void main (String[] args) {
     tec.Autobus serenity = new tec.Autobus(1, 2);
 
-    tec.PassagerStandard kaylee = new tec.PassagerStandard("Kaylee", 4);
-    tec.PassagerStandard jayne = new tec.PassagerStandard("Jayne", 4);
-    tec.PassagerStandard inara = new tec.PassagerStandard("Inara", 5);
+    tec.PassagerStandard kaylee = new tec.PassagerStandard("Kaylee", 4, 1);
+    tec.PassagerStandard jayne = new tec.PassagerStandard("Jayne", 4, 0);
+    tec.PassagerStandard inara = new tec.PassagerStandard("Inara", 5, 1);
 
     System.out.println(serenity);
 
