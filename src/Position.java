@@ -17,13 +17,21 @@ class Position {
   private final int ASSIS  = 2;
   private final int DEBOUT = 3;
 
+  private static final Position INSTANCE_DEHORS = new Position(DEHORS);
+  private static final Position INSTANCE_ASSIS  = new Position(ASSIS);
+  private static final Position INSTANCE_DEBOUT = new Position(DEBOUT);
+
   private final int COURANT;
+
+  public static Position create() { // méthode de classe (ne peut être utilisée que par la classe Position)
+    return INSTANCE_DEHORS;
+  }
 
   /**
    * initialise l'instance 'a dehors.
    * 
    */
-  public Position() { // constructeur public par defaut (peut être utilisé par d'autres classes)
+  private Position() { // constructeur public par defaut (peut être utilisé par d'autres classes)
     COURANT = DEHORS;
   }
 
@@ -79,7 +87,7 @@ class Position {
    * @return instance dans l''etat assis.
    */
   public Position assis() {
-    return new Position(ASSIS); 
+    return INSTANCE_ASSIS; 
   }
 
   /**
@@ -88,7 +96,7 @@ class Position {
    * @return instance dans l''etat debout.
    */
   public Position debout() {
-    return new Position(DEBOUT);
+    return INSTANCE_DEBOUT;
   }
 
   /**
@@ -97,7 +105,7 @@ class Position {
    * @return instance dans l''etat dehors.
    */
   public Position dehors() {
-    return new Position(DEHORS);
+    return INSTANCE_DEHORS;
   }
 
   /**

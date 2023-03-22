@@ -1,0 +1,10 @@
+javac -cp build src/*.java
+java -cp build tec.DeboguePosition
+
+Si on considère des instances non constantes (modifiables) non partagé : besoin de 10 instances de Position
+non constante partagé : 1 instance mais pas de sens
+
+Si on considère des instances constantes partagés : besoin de 3 peuvent être utilisé en même temps
+constantes non partagés : besoin de 30 minimum
+
+variable de classe --> static
