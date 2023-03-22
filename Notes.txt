@@ -1,4 +1,4 @@
-javac -cp build src/*.java
+javac -d build src/*.java | java -cp build Simple
 java -cp build tec.DeboguePosition
 
 Si on considère des instances non constantes (modifiables) non partagé : besoin de 10 instances de Position
