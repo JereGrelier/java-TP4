@@ -72,7 +72,8 @@ public class Autobus {
   }
 
   public void arretDemanderSortie(PassagerStandard p) {
-    debout.decrementer();
+    if(p.estAssis()) assis.decrementer();
+    else debout.decrementer();
     p.changerEnDehors();
     // passagers.remove(p);
     passagersDel.add(p);

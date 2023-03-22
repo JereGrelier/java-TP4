@@ -48,41 +48,36 @@ public class PassagerStandard {
   }
 
   public void changerEnDehors() {
-    this.position.dehors(); 
+    this.position = this.position.dehors(); 
   }
 
   public void changerEnAssis() {
-    this.position.assis();
+    this.position = this.position.assis();
   }
 
   public void changerEnDebout() {
-    this.position.debout();
+    this.position = this.position.debout();
   }
 
   public void monterDans(Autobus t) {
     if (this.type == ANXIEUX) {
-      if (t.aPlaceAssise()){
-      } else if (t.aPlaceDebout()){
-        t.monteeDemanderDebout(this);
-      }
+      monterCaractereAnxieux(t);
     } else {
-      if (t.aPlaceAssise()){
-        t.monteeDemanderAssis(this); // 'this' is a PassagerStandard
-      } else if (t.aPlaceDebout()){
-        t.monteeDemanderDebout(this);
-      }
+      monterCaractereStandard(t);
     }
   }
 
-  public void monterCaractereStandard(Autobus t) {
-    // if (t.aPlaceAssise()){
-    //   t.monteeDemanderAssis(this); // 'this' is a PassagerStandard
-    // } else if (t.aPlaceDebout()){
-    //   t.monteeDemanderDebout(this);
-    // }
+  private void monterCaractereStandard(Autobus t) {
+    if (t.aPlaceAssise()){
+      t.monteeDemanderAssis(this); // 'this' is a PassagerStandard
+    } else if (t.aPlaceDebout()){
+      t.monteeDemanderDebout(this);
+    }
   }
-  public void monterCaractereAnxieux (Autobus t) {
-
+  private void monterCaractereAnxieux (Autobus t) {
+    if (t.aPlaceDebout()){
+      t.monteeDemanderDebout(this);
+    }
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
