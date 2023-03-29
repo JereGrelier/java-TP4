@@ -3,6 +3,7 @@ class Aiguillage {
       a.action();
     }
   }
+}
   
   class A implements Action{
     public void action() {
@@ -24,7 +25,6 @@ class Aiguillage {
     public void action() {
       lancer();
     }
-
     public void lancer() {
       System.out.println("shazammm");
     }
@@ -38,4 +38,8 @@ class Aiguillage {
       g.execute(new A());
     }
   }
+
+interface Action {
+  public void action();
+}
   
