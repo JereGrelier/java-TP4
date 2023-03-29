@@ -4,6 +4,10 @@ class Aiguillage {
   }
 }
 
+interface Action {
+  public void action();
+}
+
 class A implements Action {
   public void action() {
     jeter();
@@ -35,8 +39,4 @@ class TestAiguillage {
     g.execute(new B());
     g.execute(new A());
   }
-}
-
-interface Action {
-  public void action();
 }
