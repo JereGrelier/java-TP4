@@ -1,45 +1,42 @@
 class Aiguillage {
-    void execute(Action a) {
-      a.action();
-    }
+  void execute(Action a) {
+    a.action();
   }
 }
-  
-  class A implements Action{
-    public void action() {
-      jeter();
-      rattrapper();
-    }
-    
-    public void jeter() {
-      System.out.print("<Hop Hop>");
-    }
-  
-    public void rattrapper() {
-      System.out.println("<Poh Poh>");
-    }
+
+class A implements Action {
+  public void action() {
+    jeter();
+    rattrapper();
   }
-  
-  
-  class B implements Action{
-    public void action() {
-      lancer();
-    }
-    public void lancer() {
-      System.out.println("shazammm");
-    }
+
+  public void jeter() {
+    System.out.print("<Hop Hop>");
   }
-  
-  
-  class TestAiguillage {
-    static public void main(String[] args) {
-      Aiguillage g = new Aiguillage();
-      g.execute(new B());
-      g.execute(new A());
-    }
+
+  public void rattrapper() {
+    System.out.println("<Poh Poh>");
   }
+}
+
+class B implements Action {
+  public void action() {
+    lancer();
+  }
+
+  public void lancer() {
+    System.out.println("shazammm");
+  }
+}
+
+class TestAiguillage {
+  static public void main(String[] args) {
+    Aiguillage g = new Aiguillage();
+    g.execute(new B());
+    g.execute(new A());
+  }
+}
 
 interface Action {
   public void action();
 }
-  
