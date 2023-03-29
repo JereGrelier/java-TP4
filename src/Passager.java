@@ -30,7 +30,7 @@
  * Si l'instance d'Autobus accepte la demande, il d'eclenche une des 
  * m'ethodes qui modifient la position du passager.
  */
-interface Passager {
+public interface Passager {
     /**
      * fournit le nom de du passager.
      */
