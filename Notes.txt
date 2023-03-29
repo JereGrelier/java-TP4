@@ -7,4 +7,7 @@ non constante partagé : 1 instance mais pas de sens
 Si on considère des instances constantes partagés : besoin de 3 peuvent être utilisé en même temps
 constantes non partagés : besoin de 30 minimum
 
-variable de classe --> static
+variable de classe --> mot clé static
+
+création var : espace mémoire réservé mais pas initialisé
+initialisation : espace mémoire alloué (pointeur vers objet)
