@@ -47,15 +47,13 @@ public class PassagerStresse implements Passager, Usager{
   }
 
   public void monterDans(Autobus t) {
-    if (t.aPlaceAssise()){
-      t.monteeDemanderAssis(this); // 'this' is a PassagerStandard
-    } else if (t.aPlaceDebout()){
+    if (t.aPlaceDebout()){
       t.monteeDemanderDebout(this);
     }
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
-      if (numeroArret == this.destination) {
+      if (numeroArret == this.destination - 1) {
         t.arretDemanderSortie(this);
       }
   }
