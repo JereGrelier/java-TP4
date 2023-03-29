@@ -31,7 +31,7 @@ package tec;
  * Si l'instance d'Autobus accepte la demande, il d'eclenche une des 
  * m'ethodes qui modifient la position du passager.
  */
-public interface Passager {
+interface Passager {
     /**
      * fournit le nom de du passager.
      */
@@ -71,14 +71,6 @@ public interface Passager {
      * Cette m'ethode est appel'ee par une instance d'Autobus.
      */
     public void changerEnDebout();
-  
-    /**
-     * Cette m'ethode est appel'ee par le programme principal (le <<client>>).
-     * Elle r'ealise le caract`ere 'a la mont'ee du passager.
-     *
-     * @param v l'instance d'Autobus dans lequel va monter le passager.
-     */
-    public void monterDans(Autobus v);
     
     /**
      * Cette m'ethode r'ealise le caract`ere 'a un arr^et du passager. 

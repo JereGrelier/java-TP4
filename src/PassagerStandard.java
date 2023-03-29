@@ -3,7 +3,7 @@
 package tec;
 //source without documentation for javadoc
 
-public class PassagerStandard implements Passager{
+public class PassagerStandard implements Passager, Usager{
 
   private String nom;
   private int destination;
