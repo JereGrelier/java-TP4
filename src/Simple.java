@@ -21,6 +21,9 @@ class Simple {
     tec.Usager jayne = new tec.PassagerStandard("Jayne", 4);
     tec.Usager inara = new tec.PassagerStandard("Inara", 5);
 
+    tec.PassagerStandard newt = (tec.PassagerStandard) kaylee;
+    System.out.println(newt.estAssis());
+
     System.out.println(serenity);
 
     serenity.allerArretSuivant();
