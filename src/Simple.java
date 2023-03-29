@@ -9,7 +9,7 @@ class Simple {
    * La m'ethodes toString() doit ^etre redéfinie dans les
    * deux classes tec.PassagerStandard et tec.Autobus.
    */
-  static private void deboguerEtat (tec.Autobus t, tec.PassagerStandard p) {
+  static private void deboguerEtat (tec.Autobus t, tec.Passager p) {
     System.out.println(p);
     System.out.println(t);
   }
@@ -17,9 +17,9 @@ class Simple {
   static public void main (String[] args) {
     tec.Autobus serenity = new tec.Autobus(1, 2);
 
-    tec.PassagerStandard kaylee = new tec.PassagerStandard("Kaylee", 4);
-    tec.PassagerStandard jayne = new tec.PassagerStandard("Jayne", 4);
-    tec.PassagerStandard inara = new tec.PassagerStandard("Inara", 5);
+    tec.Passager kaylee = new tec.PassagerStandard("Kaylee", 4);
+    tec.Passager jayne = new tec.PassagerStandard("Jayne", 4);
+    tec.Passager inara = new tec.PassagerStandard("Inara", 5);
 
     System.out.println(serenity);
 
