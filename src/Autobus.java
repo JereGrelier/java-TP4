@@ -23,15 +23,15 @@ public class Autobus {
   }
 
   //methods
-  public boolean aPlaceAssise() {
+  boolean aPlaceAssise() {
     return assis.estVert();
   }
 
-  public boolean aPlaceDebout() {
+  boolean aPlaceDebout() {
     return debout.estVert();
   }
 
-  public void monteeDemanderAssis(Passager p) {
+  void monteeDemanderAssis(Passager p) {
     if (aPlaceAssise()) {
       assis.incrementer();
       passagers.add(p);
@@ -39,7 +39,7 @@ public class Autobus {
     }
   }
 
-  public void monteeDemanderDebout(Passager p) {
+  void monteeDemanderDebout(Passager p) {
     if (aPlaceDebout()) {
       debout.incrementer();
       passagers.add(p);
@@ -59,19 +59,19 @@ public class Autobus {
     // passagersDel.clear();
   }
 
-  public void arretDemanderAssis(Passager p) {
+  void arretDemanderAssis(Passager p) {
     debout.decrementer();
     p.changerEnAssis();
     assis.incrementer();
   }
 
-  public void arretDemanderDebout(Passager p) {
+  void arretDemanderDebout(Passager p) {
     assis.decrementer();
     p.changerEnDebout();
     debout.incrementer();
   }
 
-  public void arretDemanderSortie(Passager p) {
+  void arretDemanderSortie(Passager p) {
     if(p.estAssis()) assis.decrementer();
     else debout.decrementer();
     p.changerEnDehors();
