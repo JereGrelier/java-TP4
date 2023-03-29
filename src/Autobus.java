@@ -10,16 +10,16 @@ public class Autobus {
   private int numeroArret;
   private Jauge assis;
   private Jauge debout;
-  private ArrayList<PassagerStandard> passagers;
-  private ArrayList<PassagerStandard> passagersDel;
+  private ArrayList<Passager> passagers;
+  private ArrayList<Passager> passagersDel;
 
   // constructor
   public Autobus(int nbPlaceAssise, int nbPlaceDebout) {
     assis = new Jauge(nbPlaceAssise, 0);
     debout = new Jauge(nbPlaceDebout, 0);
     numeroArret = 0;
-    passagers = new ArrayList<PassagerStandard>();
-    passagersDel = new ArrayList<PassagerStandard>();
+    passagers = new ArrayList<Passager>();
+    passagersDel = new ArrayList<Passager>();
   }
 
   //methods
@@ -31,7 +31,7 @@ public class Autobus {
     return debout.estVert();
   }
 
-  public void monteeDemanderAssis(PassagerStandard p) {
+  public void monteeDemanderAssis(Passager p) {
     if (aPlaceAssise()) {
       assis.incrementer();
       passagers.add(p);
@@ -39,7 +39,7 @@ public class Autobus {
     }
   }
 
-  public void monteeDemanderDebout(PassagerStandard p) {
+  public void monteeDemanderDebout(Passager p) {
     if (aPlaceDebout()) {
       debout.incrementer();
       passagers.add(p);
@@ -51,7 +51,7 @@ public class Autobus {
     numeroArret++;
     // Create a temporary list to avoid ConcurrentModificationException
     // It has a performance cost, but it's the only way to avoid it
-    // ArrayList<PassagerStandard> passagersTmp = new ArrayList<PassagerStandard>(this.passagers); la list copié a les mêmes références (adresses <=> pointeurs) que passagers pointants vers les mêmes objets
+    // ArrayList<Passager> passagersTmp = new ArrayList<Passager>(this.passagers); la list copié a les mêmes références (adresses <=> pointeurs) que passagers pointants vers les mêmes objets
     // passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret)); // passagersTmp.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret)); // (p -> p.nouvelArret(this, numeroArret) = lambda expression
     // passagersTmp.clear(); // clear the temporary list, garbage collector will do the rest
     passagers.iterator().forEachRemaining(p -> p.nouvelArret(this, numeroArret));
@@ -59,19 +59,19 @@ public class Autobus {
     // passagersDel.clear();
   }
 
-  public void arretDemanderAssis(PassagerStandard p) {
+  public void arretDemanderAssis(Passager p) {
     debout.decrementer();
     p.changerEnAssis();
     assis.incrementer();
   }
 
-  public void arretDemanderDebout(PassagerStandard p) {
+  public void arretDemanderDebout(Passager p) {
     assis.decrementer();
     p.changerEnDebout();
     debout.incrementer();
   }
 
-  public void arretDemanderSortie(PassagerStandard p) {
+  public void arretDemanderSortie(Passager p) {
     if(p.estAssis()) assis.decrementer();
     else debout.decrementer();
     p.changerEnDehors();
