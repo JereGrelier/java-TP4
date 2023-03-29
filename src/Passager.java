@@ -1,3 +1,4 @@
+package tec;
 /**
  * Cette interface fixe/d'efinit/sp'ecifie les services d'un passager
  * qui va ^etre pris en charge par une instance d'Autobus.
