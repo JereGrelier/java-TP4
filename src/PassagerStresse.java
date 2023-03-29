@@ -47,15 +47,11 @@ public class PassagerStresse implements Passager, Usager{
   }
 
   public void monterDans(Autobus t) {
-    if (t.aPlaceDebout()){
-      t.monteeDemanderDebout(this);
-    }
+    
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
-      if (numeroArret == this.destination - 1) {
-        t.arretDemanderSortie(this);
-      }
+      
   }
 
   @Override // surcharge de la méthode toString() de la classe Object
