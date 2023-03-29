@@ -17,9 +17,9 @@ class SimpleNouveau {
   static public void main (String[] args) {
     tec.Autobus serenity = new tec.Autobus(1, 2);
 
-    tec.Usager kaylee = new tec.PassagerStandard("Kaylee", 4);
-    tec.Usager jayne = new tec.PassagerAnxieux("Jayne", 4);
-    tec.Usager inara = new tec.PassagerStresse("Inara", 5);
+    tec.Usager kaylee = new tec.PassagerStandard("Kaylee(standard)", 2);
+    tec.Usager jayne = new tec.PassagerAnxieux("Jayne(anxieux)", 3);
+    tec.Usager inara = new tec.PassagerStresse("Inara(stresse)", 5);
 
     System.out.println(serenity);
 
