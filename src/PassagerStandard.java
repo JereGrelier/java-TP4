@@ -55,7 +55,7 @@ public class PassagerStandard implements Passager, Usager{
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
-      if (numeroArret == this.destination) {
+      if (numeroArret >= this.destination) {
         t.arretDemanderSortie(this);
       }
   }
