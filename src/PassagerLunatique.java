@@ -11,9 +11,8 @@ public class PassagerLunatique extends PassagerStandard {
     // A la montée, même code que PassagerStandard
 
     public void nouvelArret(Autobus t, int numeroArret) {
-        if (numeroArret >= this.destination) { // >= sinon on change de place alors qu'on est dehors
-            t.arretDemanderSortie(this);
-        } else if (this.estAssis()) {
+        super.nouvelArret(t, numeroArret);
+        if (this.estAssis()) {
             t.arretDemanderDebout(this);
         } else if (this.estDebout()) {
             t.arretDemanderAssis(this);
