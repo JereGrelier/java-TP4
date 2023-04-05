@@ -53,7 +53,7 @@ public class PassagerAnxieux implements Passager, Usager{
   }
 
   public void nouvelArret(Autobus t, int numeroArret) {
-    if (numeroArret == this.destination - 1) {
+    if (numeroArret >= this.destination - 1) {
       t.arretDemanderSortie(this);
     }
   }
