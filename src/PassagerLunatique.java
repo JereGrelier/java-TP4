@@ -1,11 +1,11 @@
 package tec;
 
-class PassagerLunatique extends PassagerStandard {
+public class PassagerLunatique extends PassagerStandard {
 
     int destination;
     String name;
 
-    PassagerLunatique(String nom, int destination) {
+    public PassagerLunatique(String nom, int destination) {
         super(nom, destination);
     }
 
