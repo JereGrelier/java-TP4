@@ -20,15 +20,18 @@ class SimpleNouveau {
     tec.Usager kaylee = new tec.PassagerStandard("Kaylee(standard)", 2);
     tec.Usager jayne = new tec.PassagerAnxieux("Jayne(anxieux)", 3);
     tec.Usager inara = new tec.PassagerStresse("Inara(stresse)", 5);
+    tec.Usager zoe = new tec.PassagerLunatique("Zoe(lunatique)", 4);
 
     System.out.println(serenity);
 
     serenity.allerArretSuivant();
     //1
     kaylee.monterDans(serenity);
+    zoe.monterDans(serenity);
 
     System.out.println(serenity);
     System.out.println(kaylee);
+    System.out.println(zoe);
 
     serenity.allerArretSuivant();
     //2
@@ -37,6 +40,7 @@ class SimpleNouveau {
     System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
+    System.out.println(zoe);
 
     serenity.allerArretSuivant();
     //3
@@ -46,6 +50,7 @@ class SimpleNouveau {
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println(zoe);
 
     serenity.allerArretSuivant();
     //4
@@ -53,6 +58,7 @@ class SimpleNouveau {
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println(zoe);
 
     serenity.allerArretSuivant();
     //5
@@ -60,6 +66,7 @@ class SimpleNouveau {
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println(zoe);
   }
 }
 
