@@ -2,12 +2,11 @@ package tec;
 
 public class PassagerLunatique extends PassagerStandard {
 
-    int destination;
-    String name;
-    Position position;
+    private int destination;
 
     public PassagerLunatique(String nom, int destination) {
         super(nom, destination); // call to super class constructor
+        this.destination = destination;
     }
     // A la montée, même code que PassagerStandard
 
