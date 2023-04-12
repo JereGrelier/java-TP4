@@ -2,6 +2,8 @@
 package tec;
 //source without documentation for javadoc
 
+import tec.Autobus;
+
 abstract class PassagerAbstrait implements Passager, Usager {
 
     private String nom;
@@ -47,6 +49,10 @@ abstract class PassagerAbstrait implements Passager, Usager {
 
     protected boolean aAvantDestination(int distance, int arretCourant) {
         return arretCourant + distance < this.destination;
+    }
+
+    public void nouvelArret(Autobus t, int arret) {
+        this.faireChoixArret(t, arret);
     }
 
     protected abstract void faireChoixArret(Autobus b, int arret);
