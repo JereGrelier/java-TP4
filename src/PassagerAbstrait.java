@@ -2,7 +2,7 @@
 package tec;
 //source without documentation for javadoc
 
-class PassagerAbstrait implements Passager, Usager {
+abstract class PassagerAbstrait implements Passager, Usager {
 
     private String nom;
     private int destination;
