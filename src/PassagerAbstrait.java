@@ -49,6 +49,8 @@ abstract class PassagerAbstrait implements Passager, Usager {
         return arretCourant + distance < this.destination;
     }
 
+    protected abstract void faireChoixArret(Autobus b, int arret);
+
     @Override // surcharge de la méthode toString() de la classe Object
     public String toString() {
         return this.nom() + " " + this.position; // this.position appelle la méthode toString() de la classe Position
