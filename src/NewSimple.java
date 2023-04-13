@@ -7,20 +7,20 @@ class NewSimple {
    * Sur un param`etre de type Object, la m'ethode println()
    * utilise la methode toString().
    * La m'ethodes toString() doit ^etre redéfinie dans les
-   * deux classes tec.PassagerStandard et tec.Autobus.
+   * deux classes PassagerStandard et Autobus.
    */
-  static private void deboguerEtat (tec.Autobus t, tec.Usager u) {
+  static private void deboguerEtat (Autobus t, Usager u) {
     System.out.println(u);
     System.out.println(t);
   }
 
   static public void main (String[] args) {
-    tec.Autobus serenity = new tec.Autobus(1, 2);
+    Autobus serenity = new Autobus(1, 2);
 
-    tec.Usager kaylee = new tec.NewPassagerStandard("Kaylee(standard)", 2);
-    tec.Usager jayne = new tec.NewPassagerAnxieux("Jayne(anxieux)", 3);
-    tec.Usager inara = new tec.NewPassagerStresse("Inara(stresse)", 5);
-    tec.Usager zoe = new tec.NewPassagerLunatique("Zoe(lunatique)", 4);
+    Usager kaylee = new NewPassagerStandard("Kaylee(standard)", 2);
+    Usager jayne = new NewPassagerAnxieux("Jayne(anxieux)", 3);
+    Usager inara = new NewPassagerStresse("Inara(stresse)", 5);
+    Usager zoe = new NewPassagerLunatique("Zoe(lunatique)", 4);
 
     System.out.println(serenity);
 
