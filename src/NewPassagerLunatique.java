@@ -1,20 +1,13 @@
 package tec;
 
 import tec.Autobus;
+import tec.MonterDansStandard;
 import tec.PassagerAbstrait;
 
-public class NewPassagerLunatique extends PassagerAbstrait {
+public class NewPassagerLunatique extends MonterDansStandard {
 
     public NewPassagerLunatique(String nom, int destination) {
         super(nom, destination); // call to super class constructor
-    }
-
-    public void monterDans(Autobus t) {
-        if (t.aPlaceAssise()) {
-            t.monteeDemanderAssis(this);
-        } else if (t.aPlaceDebout()) {
-            t.monteeDemanderDebout(this);
-        }
     }
 
     protected void faireChoixArret(Autobus t, int arret) {
