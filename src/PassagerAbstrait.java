@@ -48,7 +48,7 @@ abstract class PassagerAbstrait implements Passager, Usager {
     }
 
     protected boolean aAvantDestination(int distance, int arretCourant) {
-        return arretCourant + distance < this.destination;
+        return arretCourant + distance >= this.destination;
     }
 
     public void nouvelArret(Autobus t, int arret) {

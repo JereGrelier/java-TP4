@@ -1,6 +1,7 @@
 package tec;
 
 import tec.Autobus;
+import tec.PassagerAbstrait;
 
 public class NewPassagerLunatique extends PassagerAbstrait {
 
@@ -16,9 +17,8 @@ public class NewPassagerLunatique extends PassagerAbstrait {
         }
     }
 
-    
     protected void faireChoixArret(Autobus t, int arret) {
-        if(aAvantDestination(0, arret) ) {
+        if (aAvantDestination(0, arret)) {
             t.arretDemanderSortie(this);
         }
         if (this.estAssis()) {

@@ -1,3 +1,7 @@
+package tec;
+
+import tec.PassagerAbstrait;
+
 public abstract class MonterDansStandard extends PassagerAbstrait{
     public MonterDansStandard(String nom, int destination) {
         super(nom, destination);
