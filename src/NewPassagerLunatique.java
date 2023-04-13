@@ -1,8 +1,5 @@
 package tec;
 
-import tec.Autobus;
-import tec.MonterDansStandard;
-import tec.PassagerAbstrait;
 
 public class NewPassagerLunatique extends MonterDansStandard {
 

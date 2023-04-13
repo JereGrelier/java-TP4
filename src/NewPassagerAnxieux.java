@@ -1,8 +1,6 @@
 package tec;
 
 //source without documentation for javadoc
-import tec.PassagerAbstrait;
-import tec.Autobus;
 
 public class NewPassagerAnxieux extends PassagerAbstrait {
 

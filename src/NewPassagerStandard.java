@@ -2,8 +2,6 @@
 package tec;
 
 //source without documentation for javadoc
-import tec.MonterDansStandard;
-import tec.Autobus;
 
 public class NewPassagerStandard extends MonterDansStandard {
 
