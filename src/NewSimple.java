@@ -1,4 +1,4 @@
-import tec.*;
+// import tec.*; // si on importe, pas besoin de metter les ".tec" partout ci dessous
 
 class NewSimple {
 
