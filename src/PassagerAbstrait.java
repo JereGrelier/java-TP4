@@ -55,7 +55,7 @@ abstract class PassagerAbstrait implements Passager, Usager {
         this.faireChoixArret(t, arret);
     }
 
-    protected abstract void faireChoixArret(Autobus b, int arret);
+    protected abstract void faireChoixArret(Autobus b, int arret); // protected accessible aux classes filles qui héritent PassagerAbstrait
 
     @Override // surcharge de la méthode toString() de la classe Object
     public String toString() {
